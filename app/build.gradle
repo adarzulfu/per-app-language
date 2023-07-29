@@ -9,11 +9,11 @@ android {
 
     defaultConfig {
         applicationId "com.example.pre_app_language"
-        minSdk 24
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
+        resourceConfigurations += ["en", "de-rDE", "es-rES", "tr-rTR"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
