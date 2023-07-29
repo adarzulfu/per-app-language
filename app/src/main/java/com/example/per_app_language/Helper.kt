@@ -1,6 +1,5 @@
-package com.example.pre_app_language
+package com.example.per_app_language
 
-import android.os.Build
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle

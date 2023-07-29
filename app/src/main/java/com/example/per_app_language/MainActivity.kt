@@ -1,4 +1,4 @@
-package com.example.pre_app_language
+package com.example.per_app_language
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.toSize
 import androidx.core.os.LocaleListCompat
-import com.example.pre_app_language.ui.theme.PreapplanguageTheme
+import com.example.per_app_language.ui.theme.PreapplanguageTheme
 
 
 class MainActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.pre_app_language
+package com.example.per_app_language
 
 import org.junit.Test
 
