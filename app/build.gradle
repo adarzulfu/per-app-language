@@ -7,6 +7,12 @@ android {
     namespace 'com.example.pre_app_language'
     compileSdk 33
 
+    android {
+        androidResources {
+            generateLocaleConfig = true
+        }
+    }
+
     defaultConfig {
         applicationId "com.example.pre_app_language"
         minSdk 24
