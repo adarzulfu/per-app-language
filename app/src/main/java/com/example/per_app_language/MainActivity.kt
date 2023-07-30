@@ -1,20 +1,16 @@
-package com.example.pre_app_language
+package com.example.per_app_language
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.setApplicationLocales
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -26,7 +22,6 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -40,12 +35,11 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.toSize
 import androidx.core.os.LocaleListCompat
-import com.example.pre_app_language.ui.theme.PreapplanguageTheme
+import com.example.per_app_language.ui.theme.PreapplanguageTheme
 
 
 class MainActivity : AppCompatActivity() {
@@ -68,11 +62,10 @@ private fun changeLanguage(code: String) {
 fun Content() {
     Column(modifier = Modifier.fillMaxSize()) {
 
-        DropdownContent()
-
         Row(
             modifier = Modifier
                 .align(CenterHorizontally)
+                .padding(10.dp)
         ) {
             Greeting(LocalContext.current.getString(R.string.hello))
             Image(
@@ -83,6 +76,13 @@ fun Content() {
                     .padding(start = 10.dp)
             )
         }
+
+        Text(
+            text = formattedCurrentDate, modifier = Modifier
+                .align(CenterHorizontally)
+        )
+
+        DropdownContent()
     }
 }
 
@@ -109,7 +109,6 @@ fun DropdownContent() {
 
     Column(Modifier.padding(20.dp)) {
 
-        val disabledItem = 0
         OutlinedTextField(
             value = selectedText,
             onValueChange = { selectedText = it },
@@ -141,8 +140,7 @@ fun DropdownContent() {
                             selectedText = itemValue.displayText
                             changeLanguage(itemValue.countryCode)
                             expanded = false
-                        },
-                        enabled = (itemIndex != disabledItem)
+                        }
                     )
                 }
             }
