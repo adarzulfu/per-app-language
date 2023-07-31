@@ -7,10 +7,8 @@ android {
     namespace 'com.example.per_app_language'
     compileSdk 33
 
-    android {
-        androidResources {
-            generateLocaleConfig = true
-        }
+    androidResources {
+        generateLocaleConfig = true
     }
 
     defaultConfig {
