@@ -9,9 +9,9 @@ class DropDownUiModel(val displayText: String, val countryCode: String)
 
 val dropdownItemList = listOf(
     DropDownUiModel("English", "en"),
-    DropDownUiModel("German", "de"),
-    DropDownUiModel("Spanish", "es"),
-    DropDownUiModel("Turkish", "tr")
+    DropDownUiModel("German", "de-DE"),
+    DropDownUiModel("Spanish", "es-ES"),
+    DropDownUiModel("Turkish", "tr-TR")
 )
 
 private val formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)
